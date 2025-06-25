@@ -1,9 +1,10 @@
 // App.tsx
 import * as React from "react";
 import { useEffect, useState } from "react";
-import { supabase } from "./supabase";
+
 import type { User } from "@supabase/supabase-js";
-import { Button } from "./components/ui/button";
+import { Button } from "./components/ui/button.js";
+import { supabase } from "./supabase.js";
 
 function App() {
   const [user, setUser] = useState<User | null>(null);

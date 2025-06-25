@@ -3,11 +3,12 @@
     "jsx": "react",
     "baseUrl": ".",
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "nodenext",
     "target": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "lib": ["DOM", "ESNext"],
     "types": ["vite/client"],
+     "allowImportingTsExtensions": false, 
     "paths": {
       "@/*": ["src/*"]
     }
