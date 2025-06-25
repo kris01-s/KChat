@@ -1,10 +1,13 @@
 {
   "compilerOptions": {
     "jsx": "react",
-    "jsx": "react",
     "baseUrl": ".",
     "esModuleInterop": true,
+    "module": "esnext",
+    "target": "esnext",
     "moduleResolution": "node",
+    "lib": ["DOM", "ESNext"],
+    "types": ["vite/client"],
     "paths": {
       "@/*": ["src/*"]
     }
