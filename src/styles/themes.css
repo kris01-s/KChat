@@ -1,0 +1,77 @@
+/* Light Theme (por defecto) */
+:root {
+  --background: hsl(210 20% 98%); /* #f9fafb */
+  --foreground: hsl(222 47% 11%); /* #1f2937 */
+
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(222 47% 11%);
+
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(222 47% 11%);
+
+  --primary: hsl(221 83% 53%); /* #2563eb */
+  --primary-foreground: hsl(0 0% 100%);
+
+  --secondary: hsl(212 92% 70%); /* #60a5fa */
+  --secondary-foreground: hsl(222 47% 11%);
+
+  --muted: hsl(210 40% 96%);
+  --muted-foreground: hsl(215 20% 44%);
+
+  --accent: hsl(210 40% 90%);
+  --accent-foreground: hsl(222 47% 11%);
+
+  --destructive: hsl(0 85% 60%);
+  --destructive-foreground: hsl(0 0% 100%);
+
+  --border: hsl(220 13% 91%);
+  --input: hsl(220 13% 91%);
+  --ring: hsl(221 83% 53%);
+
+  --radius: 0.5rem;
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+}
+
+/* Dark Theme */
+.dark {
+  --background: hsl(276 100% 14%); /* #240046 */
+  --foreground: hsl(0 0% 100%); /* #FFFFFF */
+
+  --card: hsl(271 35% 26%); /* #3C096C */
+  --card-foreground: hsl(0 0% 100%);
+
+  --popover: hsl(271 35% 26%);
+  --popover-foreground: hsl(0 0% 100%);
+
+  --primary: hsl(320 95% 56%); /* #F72585 */
+  --primary-foreground: hsl(0 0% 100%);
+
+  --secondary: hsl(308 73% 45%); /* #B5179E */
+  --secondary-foreground: hsl(0 0% 100%);
+
+  --muted: hsl(275 63% 64%); /* #9D4EDD */
+  --muted-foreground: hsl(240 28% 90%); /* #CCCCE5 */
+
+  --accent: hsl(275 63% 64%);
+  --accent-foreground: hsl(0 0% 100%);
+
+  --destructive: hsl(39 100% 71%); /* #FFDA6C */
+  --destructive-foreground: hsl(222 47% 11%);
+
+  --border: hsl(275 45% 47%); /* #5A189A */
+  --input: hsl(275 45% 47%);
+  --ring: hsl(320 95% 56%);
+
+  --radius: 0.5rem;
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+}
