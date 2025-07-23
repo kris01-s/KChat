@@ -1,5 +1,7 @@
+import { cn } from "@/lib/utils.js";
 import React from "react";
 import { useEffect, useState } from "react";
+import { Button } from "../ui/button.js";
 
 export function ThemeToggle() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
@@ -20,13 +22,11 @@ export function ThemeToggle() {
   };
 
   return (
-    <div className="flex flex-row w-full  justify-end ">
-      <button
-        onClick={toggleTheme}
-        className="text-[var(--primary)] bg-[var(--background)]  rounded "
-      >
-        {theme === "dark" ? "☀️ Claro" : "🌙 Oscuro"}
-      </button>
-    </div>
+    <Button
+      onClick={toggleTheme}
+      className="text-[var(--primary)] bg-transparent rounded hover:border-transparent self-end "
+    >
+      {theme === "dark" ? "☀️ Light" : "🌙 Dark"}
+    </Button>
   );
 }

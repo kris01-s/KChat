@@ -17,9 +17,14 @@ function App() {
   }, []);
 
   return (
-    <div className="  w-screen h-screen flex flex-col items-start justify-start">
-      <ThemeToggle />
-      <AppRoutes />
+    <div className="bg-[var(--background)] w-screen h-screen flex flex-col overflow-x-hidden relative">
+      <div className="absolute top-4 right-4 z-50">
+        <ThemeToggle />
+      </div>
+
+      <main className="flex-1 overflow-auto">
+        <AppRoutes />
+      </main>
     </div>
   );
 }
