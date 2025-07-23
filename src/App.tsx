@@ -22,9 +22,7 @@ function App() {
         <ThemeToggle />
       </div>
 
-      <main className="flex-1 overflow-auto">
-        <AppRoutes />
-      </main>
+      <AppRoutes />
     </div>
   );
 }

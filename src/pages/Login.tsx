@@ -78,9 +78,9 @@ export default function Login() {
 
           <div className="mt-8 text-center self-center">
             <p className="text-[var(--muted-foreground)] text-sm">
-              Don't have an account?
+              Already have an account?
               <Button className="ml-1 bg-transparent shadow-none text-[var(--destructive)] hover:text-[var(--foreground)] font-semibold transition-colors p-0 h-auto">
-                Sign up here
+                Sign in here
               </Button>
             </p>
           </div>
