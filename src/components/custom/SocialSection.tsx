@@ -3,11 +3,8 @@ import React from "react";
 import { FacebookIcon, GoogleIcon } from "@/lib/constants/svg.js";
 import IconButton from "./IconButton.js";
 import { Button } from "../ui/button.js";
-
-export enum ScreenType {
-  login,
-  register,
-}
+import { Constants } from "@/lib/constants/constants.js";
+import { ScreenType } from "@/lib/constants/enums.js";
 
 interface SocialSectionProps {
   screenType?: ScreenType;
@@ -18,12 +15,12 @@ export const SocialSection = ({
 }: SocialSectionProps) => {
   const socialButtons = [
     {
-      label: "Facebook",
+      label: Constants.AUTH.SOCIAL_BUTTONS.FACEBOOK,
       icon: <FacebookIcon />,
       onClick: () => {},
     },
     {
-      label: "Google",
+      label: Constants.AUTH.SOCIAL_BUTTONS.GOOGLE,
       icon: <GoogleIcon />,
       onClick: () => {},
     },
@@ -37,7 +34,7 @@ export const SocialSection = ({
         </div>
         <div className="relative flex justify-center text-sm">
           <span className="px-4 bg-[var(--background)] text-[var(--muted-foreground)]">
-            or continue with
+            {Constants.AUTH.FOOTER.CONTINUE_WITH}
           </span>
         </div>
       </div>
@@ -56,13 +53,15 @@ export const SocialSection = ({
       <div className="mt-8 text-center self-center">
         <p className="text-[var(--muted-foreground)] text-sm">
           {screenType === ScreenType.login
-            ? `Don't have an account?`
-            : `Already have an account?`}
+            ? Constants.AUTH.FOOTER.DONT_HAVE_ACCOUNT
+            : Constants.AUTH.FOOTER.ALREADY_HAVE_ACCOUNT}
           <Button
             onClick={() => {}}
             className="ml-1 bg-transparent shadow-none text-[var(--destructive)] hover:text-[var(--foreground)] font-semibold transition-colors p-0 h-auto"
           >
-            {screenType === ScreenType.login ? `Sign up here` : `Sign in here`}
+            {screenType === ScreenType.login
+              ? Constants.AUTH.FOOTER.SIGN_UP_HERE
+              : Constants.AUTH.FOOTER.SIGN_IN_HERE}
           </Button>
         </p>
       </div>

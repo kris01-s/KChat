@@ -5,6 +5,7 @@ import TextInput from "@/components/custom/TextInput.js";
 import { Button } from "@/components/ui/button.js";
 import { SocialSection } from "@/components/custom/SocialSection.js";
 import ActionButton from "@/components/custom/ActionButton.js";
+import { Constants } from "@/lib/constants/constants.js";
 
 export default function Login() {
   return (
@@ -12,31 +13,34 @@ export default function Login() {
       <div className="rounded-3xl bg-[var(--background)] border border-[var(--border)] py-8 px-6 sm:px-10 md:px-16 shadow-2xl">
         <div className="mx-2 sm:mx-5">
           <AuthHeader
-            title="Welcome to KChat!"
-            subtitle="Let the chatting begin!"
+            title={Constants.LOGIN.HEADER.TITLE}
+            subtitle={Constants.LOGIN.HEADER.SUBTITLE}
           />
         </div>
 
         <div className="mt-12 sm:mt-16 flex flex-col items-start gap-6">
           <TextInput
-            label="Email Address"
-            placeholder="your@email.com"
+            label={Constants.LOGIN.FORM.EMAIL_LABEL}
+            placeholder={Constants.LOGIN.FORM.EMAIL_PLACEHOLDER}
             type="email"
             id="email"
             icon={<Mail />}
           />
           <TextInput
-            label="Password"
-            placeholder="******"
+            label={Constants.LOGIN.FORM.PASSWORD_LABEL}
+            placeholder={Constants.LOGIN.FORM.PASSWORD_PLACEHOLDER}
             type="password"
             id="password"
             icon={<Lock />}
           />
           <Button className="bg-transparent shadow-none text-[var(--destructive)] self-end font-semibold text-sm">
-            Forgot your password?
+            {Constants.LOGIN.FORM.FORGOT_PASSWORD}
           </Button>
 
-          <ActionButton label={"Sign In"} onClick={() => {}} />
+          <ActionButton
+            label={Constants.LOGIN.FORM.ACTION_BUTTON_LABEL}
+            onClick={() => {}}
+          />
           <SocialSection />
         </div>
       </div>
