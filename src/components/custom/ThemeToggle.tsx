@@ -1,7 +1,6 @@
-import { cn } from "@/lib/utils.js";
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "../ui/button.js";
+import { Moon, Sun } from "lucide-react";
 
 export function ThemeToggle() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
@@ -24,9 +23,16 @@ export function ThemeToggle() {
   return (
     <Button
       onClick={toggleTheme}
-      className="text-[var(--primary)] bg-transparent rounded hover:border-transparent self-end "
+      variant="ghost"
+      size="icon"
+      aria-label="Toggle theme"
+      className="transition-colors duration-300 hover:bg-muted bg-transparent"
     >
-      {theme === "dark" ? "☀️ Light" : "🌙 Dark"}
+      {theme === "dark" ? (
+        <Sun className="h-5 w-5 text-yellow-500 transition-transform duration-300 rotate-0 scale-100" />
+      ) : (
+        <Moon className="h-5 w-5 text-gray-800 transition-transform duration-300 rotate-0 scale-100" />
+      )}
     </Button>
   );
 }
